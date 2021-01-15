@@ -84,14 +84,14 @@ resource "vsphere_virtual_machine" "c2" {
     destination = "/tmp/c2.ovpn"
   }
     provisioner "file" {
-    source      = "c2Conf.sh"
-    destination = "/tmp/c2Conf.sh"
+    source      = "C2.sh"
+    destination = "/tmp/C2.sh"
   }
 
   provisioner "remote-exec" {
     inline = [
-          "chmod +x /tmp/c2Conf.sh",
-          "/bin/bash /tmp/c2Conf.sh",
+          "chmod +x /tmp/C2.sh",
+          "/bin/bash /tmp/C2.sh",
     ]
   }
   provisioner "local-exec" {
