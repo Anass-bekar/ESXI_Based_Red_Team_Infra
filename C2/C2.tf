@@ -28,7 +28,7 @@ data "vsphere_network" "network" {
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 data "vsphere_host" "host" {
-  name          = "your Esxi host"
+  name          = "your Esxi ip"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 #Starting instance
