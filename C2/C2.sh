@@ -24,6 +24,5 @@ echo "exploit -j" >> /root/rcFile.rc
 #change IP Address(static addressing case)
 sed -i '6s/.*/       - 192.168.9.249\/24/' /etc/netplan/00-installer-config.yaml
 netplan apply
-#sed -i 's/#Port 22/ListenAddress 10.8.0.2/' /etc/ssh/sshd_config
 echo "net.ipv4.icmp_echo_ignore_all=1" >> /etc/sysctl.conf
 sysctl -p
