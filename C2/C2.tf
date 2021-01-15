@@ -42,7 +42,7 @@ resource "vsphere_virtual_machine" "c2" {
   num_cpus = 1
   memory   = 2048
   wait_for_guest_net_timeout = -1
-  #Os name
+  #OS name
   guest_id = "ubuntu64Guest"
 
     ovf_deploy {
@@ -75,7 +75,8 @@ resource "vsphere_virtual_machine" "c2" {
     connection {
       type = "ssh"
       user = "root"
-      private_key = file("C:\\Users\\PC\\.ssh\\id_rsa")
+      #change to your ssh key location
+      private_key = file("C:\\home dir\\.ssh\\id_rsa")
       host = "192.168.9.245"
     }
     provisioner "file" {
@@ -94,6 +95,7 @@ resource "vsphere_virtual_machine" "c2" {
     ]
   }
   provisioner "local-exec" {
+    #change to /etc/hosts in linux
    command="echo \"192.168.9.249 c2.local\" >> C:\\Windows\\System32\\drivers\\etc\\hosts"
   }
 }
