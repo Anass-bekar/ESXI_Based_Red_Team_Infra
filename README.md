@@ -8,3 +8,6 @@ Terraform based Automation scripts suitable for a locally hosted red team infras
 
 +Change usernames, passwords, ssh keys,and paths and you'll get going.
 
+# Result:
+
+![alt text](https://github.com/Anass-bekar/ESXI_Based_Red_Team_Infra/blob/main/RedTeamInfraLayout.PNG?raw=true)
